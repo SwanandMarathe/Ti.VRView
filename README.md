@@ -1,4 +1,4 @@
-#Ti.VRview
+# Ti.VRview
 
 It is a Titanium module for realizing of a VR view for cardboard and DayDream. It supports video and images, mono and stereo.
 
