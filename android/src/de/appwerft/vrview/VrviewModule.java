@@ -39,20 +39,6 @@ public class VrviewModule extends KrollModule {
 		// created
 	}
 
-	// Methods
-	@Kroll.method
-	public String example() {
-		return "hello world";
-	}
-
-	// Properties
-	@Kroll.getProperty
-	public String getExampleProp() {
-		return "hello world";
-	}
-
-	@Kroll.setProperty
-	public void setExampleProp(String value) {
-	}
+	
 
 }

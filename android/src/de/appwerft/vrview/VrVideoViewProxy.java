@@ -11,15 +11,19 @@ package de.appwerft.vrview;
 import org.appcelerator.kroll.KrollDict;
 import org.appcelerator.kroll.KrollProxy;
 import org.appcelerator.kroll.annotations.Kroll;
-import org.appcelerator.titanium.TiC;
 import org.appcelerator.kroll.common.Log;
-import org.appcelerator.titanium.util.TiConvert;
+import org.appcelerator.titanium.TiApplication;
+import org.appcelerator.titanium.TiC;
 import org.appcelerator.titanium.proxy.TiViewProxy;
+import org.appcelerator.titanium.util.TiConvert;
 import org.appcelerator.titanium.view.TiCompositeLayout;
 import org.appcelerator.titanium.view.TiCompositeLayout.LayoutArrangement;
 import org.appcelerator.titanium.view.TiUIView;
 
+import com.google.vr.sdk.widgets.video.VrVideoView;
+
 import android.app.Activity;
+import android.content.Context;
 
 // This proxy can be created by calling Vrview.createExample({message: "hello world"})
 @Kroll.proxy(creatableInModule = VrviewModule.class)
@@ -30,12 +34,13 @@ public class VrVideoViewProxy extends TiViewProxy {
 	private int mediaType = 0;
 	private String image = null;
 	private String video = null;
+	private VrVideoView vrVideoView;
 
 	private class ExampleView extends TiUIView {
 		public ExampleView(TiViewProxy proxy) {
 			super(proxy);
 			LayoutArrangement arrangement = LayoutArrangement.DEFAULT;
-
+			Log.d("xxxx", "message");
 			if (proxy.hasProperty(TiC.PROPERTY_LAYOUT)) {
 				String layoutProperty = TiConvert.toString(proxy
 						.getProperty(TiC.PROPERTY_LAYOUT));
@@ -62,6 +67,8 @@ public class VrVideoViewProxy extends TiViewProxy {
 
 	@Override
 	public TiUIView createView(Activity activity) {
+		Context ctx = TiApplication.getInstance();
+		VrVideoView vrVideoView = new VrVideoView(ctx);
 		TiUIView view = new ExampleView(this);
 		view.getLayoutParams().autoFillsHeight = true;
 		view.getLayoutParams().autoFillsWidth = true;
@@ -75,11 +82,8 @@ public class VrVideoViewProxy extends TiViewProxy {
 		if (options.containsKey("isStereo")) {
 			isStereo = options.getBoolean("isStereo");
 		}
-		if (options.containsKey("image")) {
-			image = options.getString("image");
-		}
-		if (options.containsKey("video")) {
-			video = options.getString("video");
+		if (options.containsKey(TiC.PROPERTY_URL)) {
+			image = options.getString(TiC.PROPERTY_URL);
 		}
 	}
 
@@ -89,6 +93,7 @@ public class VrVideoViewProxy extends TiViewProxy {
 
 	@Kroll.method
 	public void loadVideo(String uri, KrollDict opts) {
+
 	}
 
 	@Kroll.method

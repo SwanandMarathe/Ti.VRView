@@ -1,6 +1,9 @@
-#Ti.VRview
+# Ti.VRPanoramaView
 
-It is a Titanium module for realizing of a VR view for cardboard and DayDream. It supports video and images, mono and stereo.
+It is a Titanium module for realizing of a VRPanoramaView.
+The common format for panorama is this format:
+
+
 
 The project is work in progress and no ready for use.
 
