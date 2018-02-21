@@ -4,25 +4,24 @@
 It is a Titanium module for realizing of a VRPanoramaView.
 The common format for panorama is this format:
 
+<img src="https://github.com/AppWerft/Ti.VRPanoramaView/blob/master/documentation/example.jpg?raw=true" width=700 />)
 
 
 The project is work in progress and no ready for use.
 
-<img src="http://www.affinityvr.com/wp-content/uploads/2016/05/vr-view.jpg" width=500 />
 
 ## Usage
 
 ```javascript
-var VR = require("de.appwerft.vrview");
+var VR = require("ti.vrpanoramaview");
 var win = Ti.UI.createWindow({
 	theme : "Theme.AppCompat.NoTitleBar.Fullscreen"
 });
-var vrView = VR.createVrVideoView({
-	autostart : true,
+var vrView = VR.createView({
 	isStereo : true
+    image : Ti.Filessystem.getFile(...).nativePath
 });
-vrView.loadVideo("http://tools.webmasterei.com/vrview/VRtest.mp4");
-vrView.playVideo();
+
 win.add(vrView);
 ```
 
