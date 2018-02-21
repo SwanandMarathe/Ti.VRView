@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ti.VRPanoramaView
 
 It is a Titanium module for realizing of a VRPanoramaView.
@@ -8,7 +9,8 @@ The common format for panorama is this format:
 The project is work in progress and no ready for use.
 
 <img src="http://www.affinityvr.com/wp-content/uploads/2016/05/vr-view.jpg" width=500 />
-##Usage
+
+## Usage
 
 ```javascript
 var VR = require("de.appwerft.vrview");
