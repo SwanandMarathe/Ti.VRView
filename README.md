@@ -17,19 +17,10 @@ var win = Ti.UI.createWindow({
 	theme : "Theme.AppCompat.NoTitleBar.Fullscreen"
 });
 var vrView = VR.createView({
-	isStereo : true
+	isStereo : false,
     image : Ti.Filessystem.getFile(...).nativePath
 });
 
 win.add(vrView);
 ```
 
-Don't forget to restrict the screenorientation to "landscape"!
-```xml
-<activity 
-	android:name="org.appcelerator.titanium.TiActivity" 
-	android:screenOrientation="landscape" 
-	android:configChanges="keyboardHidden|screenSize"
-/>
-		
-```
