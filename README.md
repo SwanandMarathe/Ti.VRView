@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ti.VRPanoramaView
 
 It is a Titanium module for realizing of a VRPanoramaView.
