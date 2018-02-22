@@ -6,7 +6,7 @@
  * Please see the LICENSE included with this distribution for details.
  *
  */
-package de.appwerft.vrview;
+package ti.vrview;
 
 import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
@@ -38,7 +38,5 @@ public class VrviewModule extends KrollModule {
 		// put module init code that needs to run when the application is
 		// created
 	}
-
-	
 
 }

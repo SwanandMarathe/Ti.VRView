@@ -1,4 +1,4 @@
-package de.appwerft.vrview;
+package ti.vrview;
 
 import org.appcelerator.kroll.KrollDict;
 import org.appcelerator.kroll.KrollModule;

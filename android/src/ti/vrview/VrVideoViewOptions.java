@@ -1,4 +1,4 @@
-package de.appwerft.vrview;
+package ti.vrview;
 
 public class VrVideoViewOptions {
 	private int inputFormat;

@@ -1,4 +1,4 @@
-package de.appwerft.vrview;
+package ti.vrview;
 
 import android.view.LayoutInflater;
 import android.view.View;
