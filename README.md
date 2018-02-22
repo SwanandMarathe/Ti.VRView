@@ -24,3 +24,22 @@ var vrView = VR.createView({
 win.add(vrView);
 ```
 
+##  Constants
+
+### Type of streaming
+
+* FORMAT_DEFAULT
+Indicates that the video is in a standard video container format such as mp4, webm, ogg, aac.
+
+* FORMAT_HLS
+Indicates that the video uses the HTTP Live Streaming (HLS) format.
+
+
+### Mono (screen) or stereo (cardbox)
+* TYPE_MONO
+Each video frame is a monocular equirectangular panorama.
+
+* TYPE_STEREO_OVER_UNDER
+Each video frame contains two vertically-stacked equirectangular panoramas.
+
+
