@@ -16,12 +16,12 @@ var VR = require("ti.vrpanoramaview");
 var win = Ti.UI.createWindow({
 	theme : "Theme.AppCompat.NoTitleBar.Fullscreen"
 });
-var vrView = VR.createView({
-	isStereo : false,
+var panoView = VR.createPanoramaView({
+    type : VR.TYPE_MONO,
     image : Ti.Filessystem.getFile(...).nativePath
 });
 
-win.add(vrView);
+win.add(panoView);
 ```
 
 ##  Constants
@@ -43,3 +43,8 @@ Each video frame is a monocular equirectangular panorama.
 Each video frame contains two vertically-stacked equirectangular panoramas.
 
 
+## Methods
+
+* createPanoramaView()
+
+* createVideoView()
