@@ -19,15 +19,10 @@ import com.google.vr.sdk.widgets.pano.VrPanoramaView;
 
 @Kroll.module(name = "Vrview", id = "ti.vrview")
 public class VrviewModule extends KrollModule {
-	// Indicates that the video is in a standard video container format such as
-	// mp4, webm, ogg, aac.
+	
 	final static int FORMAT_DEFAULT = VrVideoView.Options.FORMAT_DEFAULT;
-	// Indicates that the video uses the HTTP Live Streaming (HLS) format.
 	final static int FORMAT_HLS = VrVideoView.Options.FORMAT_HLS;
-	// Each video frame is a monocular equirectangular panorama.
 	final static int TYPE_MONO = VrVideoView.Options.TYPE_MONO;
-	// Each video frame contains two vertically-stacked equirectangular
-	// panoramas.
 	final static int TYPE_STEREO_OVER_UNDER = VrVideoView.Options.TYPE_STEREO_OVER_UNDER;
 
 	public VrviewModule() {

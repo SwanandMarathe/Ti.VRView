@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<View xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/pano_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
-
-    <com.google.vr.sdk.widgets.pano.VrPanoramaView android:id="@+id/pano_view" android:layout_width="match_parent" android:layout_height="match_parent" android:scrollbars="@null"/>
-</View>
