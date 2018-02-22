@@ -15,8 +15,9 @@ import org.appcelerator.kroll.common.Log;
 import org.appcelerator.kroll.common.TiConfig;
 
 import com.google.vr.sdk.widgets.video.VrVideoView;
+import com.google.vr.sdk.widgets.pano.VrPanoramaView;
 
-@Kroll.module(name = "Vrview", id = "de.appwerft.vrview")
+@Kroll.module(name = "Vrview", id = "ti.vrview")
 public class VrviewModule extends KrollModule {
 	// Indicates that the video is in a standard video container format such as
 	// mp4, webm, ogg, aac.
@@ -35,8 +36,7 @@ public class VrviewModule extends KrollModule {
 
 	@Kroll.onAppCreate
 	public static void onAppCreate(TiApplication app) {
-		// put module init code that needs to run when the application is
-		// created
+
 	}
 
 }

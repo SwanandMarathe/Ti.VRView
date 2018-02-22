@@ -60,7 +60,7 @@
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/JavaObject.h \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/EventEmitter.h \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/NativeObject.h \
- jni/ti.vrview.VrVideoViewProxy.h jni/ti.vrview.VrviewModule.h
+ jni/ti.vrview.VrviewModule.h
 
 /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/v8.h:
 
@@ -183,7 +183,5 @@ jni/ti.vrview.PanoramaViewProxy.h:
 /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/EventEmitter.h:
 
 /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/NativeObject.h:
-
-jni/ti.vrview.VrVideoViewProxy.h:
 
 jni/ti.vrview.VrviewModule.h:

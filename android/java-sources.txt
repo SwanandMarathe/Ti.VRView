@@ -1,7 +1,4 @@
-"/Users/fuerst/Documents/APPC_WORKSPACE/Ti.VRview/android/src/ti/vrview/PanoramaView.java"
 "/Users/fuerst/Documents/APPC_WORKSPACE/Ti.VRview/android/src/ti/vrview/PanoramaViewProxy.java"
-"/Users/fuerst/Documents/APPC_WORKSPACE/Ti.VRview/android/src/ti/vrview/VrVideoViewOptions.java"
-"/Users/fuerst/Documents/APPC_WORKSPACE/Ti.VRview/android/src/ti/vrview/VrVideoViewProxy.java"
 "/Users/fuerst/Documents/APPC_WORKSPACE/Ti.VRview/android/src/ti/vrview/VrviewModule.java"
 "/Users/fuerst/Documents/APPC_WORKSPACE/Ti.VRview/android/build/generated/java/ti/vrview/VrviewBootstrap.java"
 "/Users/fuerst/Documents/APPC_WORKSPACE/Ti.VRview/android/build/generated/r/android/support/compat/R.java"
