@@ -1,6 +1,8 @@
-# Ti.VRPanoramaView
+# Ti.VRView
 
-It is a Titanium module for realizing of a VRPanoramaView.
+It is a Titanium module for realizing of a VRPanoramaView and VRVideoView.
+
+
 The common format for panorama is this format:
 
 <img src="https://github.com/AppWerft/Ti.VRPanoramaView/blob/master/documentation/example.jpg?raw=true" width=700 />)
