@@ -12,17 +12,16 @@ import android.app.Activity;
 @Kroll.proxy(creatableInModule = VrviewModule.class)
 public class PanoramaViewProxy extends TiViewProxy {
 
-    public PanoramaViewProxy() {
-        super();
-    }
+	public PanoramaViewProxy() {
+		super();
+	}
 
-    @Override
-    public TiUIView createView(Activity activity)
-    {
-        PanoramaView view = new PanoramaView(this);
-        view.getLayoutParams().autoFillsHeight = true;
-        view.getLayoutParams().autoFillsWidth = true;
+	@Override
+	public TiUIView createView(Activity activity) {
+		PanoramaView view = new PanoramaView(this);
+		view.getLayoutParams().autoFillsHeight = true;
+		view.getLayoutParams().autoFillsWidth = true;
 
-        return view;
-    }
+		return view;
+	}
 }
