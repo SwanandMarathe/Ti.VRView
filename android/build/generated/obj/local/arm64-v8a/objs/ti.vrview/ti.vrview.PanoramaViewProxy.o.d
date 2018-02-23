@@ -1,4 +1,4 @@
-/Users/fuerst/Documents/APPC_WORKSPACE/Ti.VRview/android/build/generated/obj/local/arm64-v8a/objs/ti.vrview/ti.vrview.PanoramaViewProxy.o: \
+/Users/fuerst/Desktop/vrview/android/build/generated/obj/local/arm64-v8a/objs/ti.vrview/ti.vrview.PanoramaViewProxy.o: \
  jni/ti.vrview.PanoramaViewProxy.cpp jni/ti.vrview.PanoramaViewProxy.h \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/Proxy.h \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/v8.h \

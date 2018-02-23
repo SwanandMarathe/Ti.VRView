@@ -1,4 +1,4 @@
-/Users/fuerst/Documents/APPC_WORKSPACE/Ti.VRview/android/build/generated/obj/local/armeabi-v7a/objs/ti.vrview/__/VrviewBootstrap.o: \
+/Users/fuerst/Desktop/vrview/android/build/generated/obj/local/armeabi-v7a/objs/ti.vrview/__/VrviewBootstrap.o: \
  jni/../VrviewBootstrap.cpp \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/v8.h \
  /Users/fuerst/Library/Android/ndk/sources/cxx-stl/llvm-libc++/../../android/support/include/stdint.h \

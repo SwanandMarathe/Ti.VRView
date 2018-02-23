@@ -1,6 +1,12 @@
 package ti.vrview;
 
 import java.io.File;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
@@ -13,7 +19,7 @@ import org.appcelerator.titanium.TiApplication;
 import org.appcelerator.titanium.TiC;
 import org.appcelerator.titanium.proxy.TiViewProxy;
 import org.appcelerator.titanium.view.TiUIView;
-
+import ti.modules.titanium.filesystem.FileProxy;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.BitmapFactory;
@@ -28,6 +34,9 @@ import com.google.vr.sdk.widgets.pano.VrPanoramaView;
 import com.google.vr.sdk.widgets.pano.VrPanoramaView.Options;
 
 import java.io.IOException;
+import org.appcelerator.titanium.io.TiBaseFile;
+import org.appcelerator.titanium.io.TiFile;
+import org.appcelerator.titanium.io.TiFileFactory;
 
 @Kroll.proxy(creatableInModule = VrviewModule.class)
 public class PanoramaViewProxy extends TiViewProxy {
@@ -40,34 +49,33 @@ public class PanoramaViewProxy extends TiViewProxy {
 	private static final String LCAT = "TiVR";
 
 	private ImageLoaderTask backgroundImageLoaderTask;
-	private String image;
+	private Uri fileUriOfPanoImage;
 	public VrPanoramaView panoWidgetView;
 
 	private class PanoramaView extends TiUIView {
-
+	
 		private Options panoOptions = new Options();
 		public boolean loadImageSuccessful = false;
-		private Uri fileUri;
+		private Uri fileUriOfPanoImage;
 
 		public PanoramaView(final TiViewProxy proxy) {
 			super(proxy);
+			Log.d(LCAT,"Start PanoramaView with " + fileUriOfPanoImage.toString());
 			LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT,
 					LayoutParams.WRAP_CONTENT);
 			LinearLayout container = new LinearLayout(proxy.getActivity());
 			container.setLayoutParams(lp);
-			panoWidgetView = new VrPanoramaView(null);
+			panoWidgetView = new VrPanoramaView(proxy.getActivity());
 
 			panoOptions.inputType = type;
 			if (backgroundImageLoaderTask != null) {
 				backgroundImageLoaderTask.cancel(true);
 			}
 			backgroundImageLoaderTask = new ImageLoaderTask();
-			fileUri = Uri.parse(image.replace("file://", ""));
 			backgroundImageLoaderTask
-					.execute(Pair.create(fileUri, panoOptions));
+					.execute(Pair.create(fileUriOfPanoImage, panoOptions));
 			container.addView(panoWidgetView);
 			setNativeView(container);
-
 		}
 	}
 
@@ -111,7 +119,7 @@ public class PanoramaViewProxy extends TiViewProxy {
 	}
 
 	private void handleStart() {
-        
+
 	}
 
 	@Kroll.method
@@ -131,7 +139,6 @@ public class PanoramaViewProxy extends TiViewProxy {
 
 	@Override
 	public TiUIView createView(Activity activity) {
-		Log.d(LCAT, "TiUIView createView");
 		view = new PanoramaView(this);
 		view.getLayoutParams().autoFillsHeight = true;
 		view.getLayoutParams().autoFillsWidth = true;
@@ -142,14 +149,39 @@ public class PanoramaViewProxy extends TiViewProxy {
 	@Override
 	public void handleCreationDict(KrollDict opts) {
 		super.handleCreationDict(opts);
+
 		if (opts.containsKeyAndNotNull(TiC.PROPERTY_TYPE)) {
 			type = opts.getInt(TiC.PROPERTY_TYPE);
-			if (opts.containsKeyAndNotNull(TiC.PROPERTY_IMAGE)) {
-				image = opts.getString(TiC.PROPERTY_IMAGE);
-
-			} else
-				Log.w(LCAT, "image missing");
 		}
+		if (opts.containsKeyAndNotNull(TiC.PROPERTY_IMAGE)) {
+			Object inputValue = opts.get(TiC.PROPERTY_IMAGE);
+			TiBaseFile inputFile = null;
+			if (inputValue instanceof TiFile) {
+				inputFile = TiFileFactory.createTitaniumFile(
+						((TiFile) inputValue).getFile().getAbsolutePath(),
+						false);
+			} else {
+				if (inputValue instanceof FileProxy) {
+					inputFile = ((FileProxy) inputValue).getBaseFile();
+				} else {
+					if (inputValue instanceof TiBaseFile) {
+						inputFile = (TiBaseFile) inputValue;
+					} else {
+						// Assume path provided
+						inputFile = TiFileFactory.createTitaniumFile(
+								inputValue.toString(), false);
+					}
+				}
+			}
+			Log.d(LCAT,"Panofile = "+inputFile.toString());
+			if (inputFile.exists()) {
+				fileUriOfPanoImage = Uri.fromFile(inputFile.getNativeFile());
+			} else Log.e(LCAT,"(pano) file not exists");
+			
+
+		} else
+			Log.w(LCAT, "image missing");
+
 	}
 
 	/**
@@ -165,7 +197,7 @@ public class PanoramaViewProxy extends TiViewProxy {
 		@Override
 		protected Boolean doInBackground(Pair<Uri, Options>... fileInformation) {
 			Options panoOptions = null; // It's safe to use null
-										// VrPanoramaView.Options.
+			// VrPanoramaView.Options.
 			InputStream istr = null;
 
 			try {

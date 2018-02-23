@@ -4,15 +4,15 @@
 #
 version: 1.0.0
 apiversion: 4
-architectures:  arm64-v8a armeabi-v7a x86
-description: VRview, Panorama + Video
-author: Rainer Knoeterich
+architectures: arm64-v8a armeabi-v7a x86
+description: vrview
+author: Rainer
 license: Specify your license
-copyright: Copyright (c) 2017 by 
+copyright: Copyright (c) 2018 by Your Company
 
 # these should not be edited
 name: vrview
 moduleid: ti.vrview
-guid: 56b2280b-4c28-4320-abe5-a89ccd1c6682
+guid: e74039c9-1783-4b84-b4dc-2ce610ad9457
 platform: android
 minsdk: 7.0.1.GA

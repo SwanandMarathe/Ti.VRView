@@ -45,12 +45,23 @@
 	<!-- Copy license -->
 	<copy todir="${basedir}" file="${basedir}/../LICENSE"/>
 
+
+
 	<target name="cleancopy" description="Delete old copies">
 		<delete dir="${basedir}/documentation"/>
 		<delete dir="${basedir}/example"/>
 		<delete dir="${basedir}/assets"/>
 		<delete file="${basedir}/LICENSE"/>
+        
 	</target>
-
+    
 	<import file="${titanium.platform}/../module/android/build.xml"/>
+    <!-- Copy native libs -->
+     <target name="post.compile">
+    <copy todir="${libs}" description="Copy native libs >>>>">
+        <fileset dir="nativelibs">
+            <include name="**/*.so"/>
+        </fileset>
+    </copy>
+    </target>
 </project>
