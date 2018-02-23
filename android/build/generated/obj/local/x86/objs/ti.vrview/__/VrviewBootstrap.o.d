@@ -1,4 +1,4 @@
-/Users/fuerst/Desktop/vrview/android/build/generated/obj/local/x86/objs/ti.vrview/__/VrviewBootstrap.o: \
+/Users/fuerst/Documents/APPC_WORKSPACE/Ti.VRview/android/build/generated/obj/local/x86/objs/ti.vrview/__/VrviewBootstrap.o: \
  jni/../VrviewBootstrap.cpp \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/v8.h \
  /Users/fuerst/Library/Android/ndk/sources/cxx-stl/llvm-libc++/../../android/support/include/stdint.h \
@@ -55,12 +55,11 @@
  /Users/fuerst/Library/Android/ndk/sources/cxx-stl/llvm-libc++/libcxx/include/__hash_table \
  /Users/fuerst/Library/Android/ndk/sources/cxx-stl/llvm-libc++/libcxx/include/cmath \
  /Users/fuerst/Library/Android/ndk/sources/cxx-stl/llvm-libc++/../../android/support/include/math.h \
- jni/ti.vrview.PanoramaViewProxy.h \
+ jni/ti.vrview.VrviewModule.h \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/Proxy.h \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/JavaObject.h \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/EventEmitter.h \
- /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/NativeObject.h \
- jni/ti.vrview.VrviewModule.h
+ /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/NativeObject.h
 
 /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/v8.h:
 
@@ -174,7 +173,7 @@ jni/../KrollGeneratedBindings.cpp:
 
 /Users/fuerst/Library/Android/ndk/sources/cxx-stl/llvm-libc++/../../android/support/include/math.h:
 
-jni/ti.vrview.PanoramaViewProxy.h:
+jni/ti.vrview.VrviewModule.h:
 
 /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/Proxy.h:
 
@@ -183,5 +182,3 @@ jni/ti.vrview.PanoramaViewProxy.h:
 /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/EventEmitter.h:
 
 /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/NativeObject.h:
-
-jni/ti.vrview.VrviewModule.h:

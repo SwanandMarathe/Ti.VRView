@@ -24,23 +24,8 @@ function moduleBootstrap(moduleBinding) {
 		invocationAPIs.push({ namespace: namespace, api: api });
 	}
 
-	addInvocationAPI(module, "Vrview", "Vrview", "createPanoramaView");
-		if (!("__propertiesDefined__" in module)) {Object.defineProperties(module, {
-"PanoramaView": {
-get: function() {
-var PanoramaView =  lazyGet(this, "ti.vrview.PanoramaViewProxy", "PanoramaView", "PanoramaView");
-return PanoramaView;
-},
-configurable: true
-},
-
-});
-module.constructor.prototype.createPanoramaView = function() {
-return new module["PanoramaView"](arguments);
-}
-}
-module.__propertiesDefined__ = true;
-return module;
+	
+	return module;
 
 }
 exports.bootstrap = moduleBootstrap;

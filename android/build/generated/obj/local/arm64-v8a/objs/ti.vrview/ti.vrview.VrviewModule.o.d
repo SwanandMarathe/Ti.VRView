@@ -1,4 +1,4 @@
-/Users/fuerst/Desktop/vrview/android/build/generated/obj/local/arm64-v8a/objs/ti.vrview/ti.vrview.VrviewModule.o: \
+/Users/fuerst/Documents/APPC_WORKSPACE/Ti.VRview/android/build/generated/obj/local/arm64-v8a/objs/ti.vrview/ti.vrview.VrviewModule.o: \
  jni/ti.vrview.VrviewModule.cpp jni/ti.vrview.VrviewModule.h \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/Proxy.h \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/v8.h \
@@ -46,7 +46,6 @@
  /Users/fuerst/Library/Android/ndk/sources/cxx-stl/llvm-libc++/libcxx/include/__tree \
  /Users/fuerst/Library/Android/ndk/sources/cxx-stl/llvm-libc++/libcxx/include/functional \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/V8Util.h \
- jni/ti.vrview.PanoramaViewProxy.h \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/org.appcelerator.kroll.KrollModule.h \
  /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/Proxy.h
 
@@ -143,8 +142,6 @@ jni/ti.vrview.VrviewModule.h:
 /Users/fuerst/Library/Android/ndk/sources/cxx-stl/llvm-libc++/libcxx/include/functional:
 
 /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/V8Util.h:
-
-jni/ti.vrview.PanoramaViewProxy.h:
 
 /Library/Application\ Support/Titanium/mobilesdk/osx/7.0.1.GA/android/native/include/org.appcelerator.kroll.KrollModule.h:
 

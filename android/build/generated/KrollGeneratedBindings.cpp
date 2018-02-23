@@ -9,7 +9,6 @@
 #include <unordered_map>
 #include <KrollBindings.h>
 
-#include "ti.vrview.PanoramaViewProxy.h"
 #include "ti.vrview.VrviewModule.h"
 
 
@@ -45,12 +44,10 @@ namespace titanium {
 
 		BindEntry* VrviewBindings::lookupGeneratedInit(const char* name, unsigned int length) {
 			static BindEntry binds[] = {
-				{"ti.vrview.VrviewModule", ::ti::vrview::VrviewModule::bindProxy, ::ti::vrview::VrviewModule::dispose},
-				{"ti.vrview.PanoramaViewProxy", ::ti::vrview::vrview::PanoramaViewProxy::bindProxy, ::ti::vrview::vrview::PanoramaViewProxy::dispose}
+				{"ti.vrview.VrviewModule", ::ti::vrview::VrviewModule::bindProxy, ::ti::vrview::VrviewModule::dispose}
 			};
 			static std::unordered_map<const char*, BindEntry&, Hash, Compare> map = {
 				{binds[0].name, binds[0]},
-				{binds[1].name, binds[1]},
 			};
 
 			auto result = map.find(name);

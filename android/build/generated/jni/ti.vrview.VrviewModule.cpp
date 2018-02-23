@@ -17,7 +17,6 @@
 
 
 
-#include "ti.vrview.PanoramaViewProxy.h"
 
 #include "org.appcelerator.kroll.KrollModule.h"
 
