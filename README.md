@@ -3,26 +3,22 @@
 It is a Titanium module for realizing of a VRPanoramaView and VRVideoView.
 
 
-The common format for panorama is this format:
-
-<img src="https://github.com/AppWerft/Ti.VRPanoramaView/blob/master/documentation/example.jpg?raw=true" width=700 />)
-
-
-The project is work in progress and no ready for use.
-
-
 ## Usage
 
 ```javascript
-var VR = require("ti.vrpanoramaview");
+var VR = require("ti.vrview");
 var win = Ti.UI.createWindow({
-	theme : "Theme.AppCompat.NoTitleBar.Fullscreen"
 });
 var panoView = VR.createPanoramaView({
     type : VR.TYPE_MONO,
-    image : Ti.Filessystem.getFile(...).nativePath
+    image : Ti.Filessystem.getFile(Ti.Filesystem.applicationDataDirectory, "pano.jpg")),
+    onload : function() {}
 });
-
+var panoView = VR.createVideoView({
+    type : VR.TYPE_STEREO_OVER_UNDER,
+    format : VR.FORMAT_DEFAULT,
+    image : Ti.Filessystem.getFile(Ti.Filesystem.applicationDataDirectory, "pano.mp4"))
+});
 win.add(panoView);
 ```
 
